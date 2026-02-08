@@ -1,0 +1,4 @@
+flask
+agno
+markdown
+requests

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Markdown Validator AI</title>
+    <style>
+        /* Body styling */
+        body {
+            background: #121212; /* dark background */
+            color: #ffffff;      /* white text */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            padding: 40px;
+        }
+
+        h1 {
+            color: #4fc3f7; /* light blue */
+            margin-bottom: 30px;
+        }
+
+        form {
+            margin-bottom: 40px;
+        }
+
+        input[type="file"] {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #4fc3f7;
+            background-color: #1e1e2f;
+            color: #ffffff;
+            margin-right: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4fc3f7;
+            border: none;
+            border-radius: 5px;
+            color: #121212;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background-color: #0288d1;
+        }
+
+        h2 {
+            color: #81d4fa; /* lighter blue */
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            background-color: #1e1e2f;
+            margin: 10px auto;
+            padding: 15px 20px;
+            border-left: 5px solid #4fc3f7;
+            border-radius: 8px;
+            text-align: left;
+            max-width: 700px;
+            word-wrap: break-word;
+        }
+
+        pre {
+            white-space: pre-wrap; /* wrap long lines */
+            color: #ffcc80; /* highlight code/text */
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Markdown Validator AI</h1>
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" accept=".md" required>
+        <button type="submit">Validate Markdown</button>
+    </form>
+
+    {% if results %}
+        <h2>Validation Results:</h2>
+        <ul>
+            {% for r in results %}
+                <li><pre>{{ r }}</pre></li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>
