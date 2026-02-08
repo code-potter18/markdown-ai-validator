@@ -17,8 +17,9 @@ It detects issues such as:
 2. Run the application  
    python app.py
 3. Open browser and go to  
-   http://127.0.0.1:5000
+   http://127.0.0.1:5000(there is local running so i will attach the demo video)
 
 ## Demo Video
+https://drive.google.com/file/d/1rGy5m16VK8Izm6b02AIjjZF9EZAaLqKR/view?usp=sharing 
 The demo video showcasing the working solution is included in this repository  
 (or linked below if hosted externally).
